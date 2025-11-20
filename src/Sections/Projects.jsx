@@ -1,10 +1,14 @@
 import ProjectCard from "../Components/ProjectCard";
+import edith from "../assets/EDITH.png";
+import ascend from "../assets/Ascend.svg";
+import vancouver from "../assets/city-of-vancouver.svg";
+import youtube from "../assets/Youtube_Music_icon.svg";
 
 export default function Projects(){
     const projectData = [
         {
             id: 1,
-            image: "/EDITH.png",  
+            image: edith,  
             title: "E.D.I.T.H.", 
             subTitle: "A.I. Project Assistant",
             skills: "React, Tailwind CSS, Google API",
@@ -17,7 +21,7 @@ export default function Projects(){
         },
         {
             id: 2,
-            image: "/Ascend.svg",  
+            image: ascend,  
             title: "Ascend", 
             subTitle: "Self Improvement App",
             skills: "React, Tailwind CSS, Collaboration",
@@ -30,7 +34,7 @@ export default function Projects(){
         },
         {
             id: 3,
-            image: "/city-of-vancouver.svg",  
+            image: vancouver,  
             title: "City of Vancouver - Dashboard", 
             subTitle: "Municipal Website",
             skills: "React, Tailwind CSS, Collaboration",
@@ -43,7 +47,7 @@ export default function Projects(){
         },
         {
             id: 4,
-            image: "/Youtube_Music_icon.svg",  
+            image: youtube,  
             title: "YouTube Music - Motion Design", 
             subTitle: "Music Streaming Motion Design",
             skills: "HTML, CSS, JavaScript, GSAP - JS Motion Library",
