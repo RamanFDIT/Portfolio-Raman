@@ -13,7 +13,7 @@ export default function NavBar() {
         {id: 4, name: "Contact", href: "#" },
     ];
     return(
-        <nav className="flex items-center justify-between px-10 h-15 w-full max-w-655 fixed-top">
+        <nav className="flex items-center justify-between px-10 h-15 w-full max-w-655 fixed top-0 bg-bg">
             <h2 className="text-primary text-5xl">रमन</h2>
             <ul className="flex justify-between items-center w-130">
                 {navLinks.map(link => (

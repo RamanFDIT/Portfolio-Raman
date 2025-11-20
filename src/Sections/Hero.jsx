@@ -2,7 +2,8 @@
 
 export default function Hero() {
     return(
-        <section className="flex h-[90vh] min-w-139 max-w-350 flex-col justify-between items-center" id="hero">
+        
+        <section className="flex h-[93vh] min-w-139 max-w-350 flex-col justify-between items-center overflow-hidden m-auto" id="hero">
             <div></div>
             <div className = "flex flex-col items-center gap-8">
                 <h1 className="text-5xl">Your Friendly Neighborhood <span className="text-primary">RA-MAN</span></h1>
