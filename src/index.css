@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: hsla(87, 93%, 54%, 1);
+    --color-accent: hsla(327, 93%, 54%, 1);
+    --color-bg: hsla(0, 0%, 11%, 1);
+    --color-text: hsl(0, 0%, 100%);
+    --color-accent-hover: hsla(327, 89%, 63%, 1);
+    --color-card-border: hsla(87, 53%, 54%, 1);
+    --color-link: hsla(207, 93%, 54%, 1);
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+body{
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    background-color: var(--color-bg);
+}
