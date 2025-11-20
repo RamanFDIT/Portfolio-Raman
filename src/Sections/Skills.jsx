@@ -13,7 +13,7 @@ export default function Skills() {
             icon : figma,
             title : "UI/UX Design",
             desc : "Designing user-friendly interfaces and experiences for web and mobile applications.",
-            skills : "Figma, Adobe XD, Sketch, User Research, Wireframing, Prototyping"
+            skills : "Figma, Sketch, User Research, Wireframing, Prototyping"
         },
         {
             id: 2,
