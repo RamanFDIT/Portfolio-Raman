@@ -2,15 +2,25 @@ import Button from "./Button.jsx";
 import { useState } from "react";
 
 export default function NavBar() {
-    const [isActive, setIsActive] = useState(false);
+    const [activeId, setActiveId] = useState(1);
+    const handleClick = (id) => {
+        setActiveId(id);
+    };
+    const navLinks = [
+        {id: 1, name: "Home", href: "#hero" },
+        {id: 2, name: "Skills", href: "#" },
+        {id: 3, name: "Resume", href: "#" },
+        {id: 4, name: "Contact", href: "#" },
+    ];
     return(
-        <nav className="flex items-center justify-between px-10 h-15 w-full max-w-655">
+        <nav className="flex items-center justify-between px-10 h-15 w-full max-w-655 fixed-top">
             <h2 className="text-primary text-5xl">रमन</h2>
             <ul className="flex justify-between items-center w-130">
-                <a href="#"><li className="text-lg">Home</li></a>
-                <a href="#"><li className="text-lg">Skills</li></a>
-                <a href="#"><li className="text-lg">Resume</li></a>
-                <a href="#"><li className="text-lg">Contact</li></a>
+                {navLinks.map(link => (
+                    <a className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} onClick = {() => handleClick(link.id)} key={link.id} href={link.href}>
+                        <li className="text-lg">{link.name}</li>
+                    </a>
+                ))}
             </ul>
             <Button />
         </nav>
