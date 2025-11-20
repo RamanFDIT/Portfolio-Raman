@@ -56,7 +56,7 @@ export default function Projects(){
         }
     ];
     return(
-        <section className="max-w-7xl mx-auto flex flex-col gap-10 items-center py-20" id="projects">
+        <section className="max-w-375 mx-auto flex flex-col gap-10 items-center py-20 px-10" id="projects">
             <h2 className="text-center text-3xl font-semibold text-primary">Projects</h2>
             {projectData.map(project => (
                 <ProjectCard

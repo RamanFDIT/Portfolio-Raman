@@ -11,6 +11,10 @@
     --font-mono: 'Roboto Mono', monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     color: var(--color-text);
     font-family: var(--font-mono);

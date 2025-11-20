@@ -1,0 +1,65 @@
+import SkillCard from "../Components/SkillCard";
+
+export default function Skills() {
+    const skillsData = [
+        {
+            id: 1,
+            icon : "./public/Figma.png",
+            title : "UI/UX Design",
+            desc : "Designing user-friendly interfaces and experiences for web and mobile applications.",
+            skills : "Figma, Adobe XD, Sketch, User Research, Wireframing, Prototyping"
+        },
+        {
+            id: 2,
+            icon : "./public/Frontend.png",
+            title : "Frontend Development",
+            desc : "Building responsive and interactive user interfaces for web applications.",
+            skills : "React, Tailwind CSS"
+        },
+        {
+            id: 3,
+            icon : "./public/VisualDesign.png",
+            title : "Visual Design",
+            desc : "Creating visually appealing and effective designs for digital and print media.",
+            skills : "Design Systems, Branding, Typography, Color Theory"
+        },
+        {
+            id: 4,
+            icon : "./public/MobileDesign.png",
+            title : "Mobile Design",
+            desc : "Designing mobile-first experiences for iOS and Android applications.",
+            skills : "iOS Design, Android Design, Responsive Design"
+        },
+        {
+            id: 5,
+            icon : "./public/WebTechnologies.png",
+            title : "Web Technologies",
+            desc : "Leveraging modern web technologies and frameworks.",
+            skills : "React, HTML, CSS, JavaScript, Git"
+        },
+        {
+            id: 6,
+            icon : "./public/Performance.png",
+            title : "Performance Optimization",
+            desc : "Improving the speed and efficiency of web applications.",
+            skills : "Performance Auditing, Code Splitting, Lazy Loading, Caching"
+        },
+    ];
+    return(
+        <section className="max-w-375 mx-auto flex flex-col gap-10 items-center py-20" id="skills">
+            <h2 className="text-center text-3xl font-semibold text-primary">Skills</h2>
+            <div className="flex flex-wrap justify-center gap-10 w-full max-w-375 px-10 mx-auto">
+                {skillsData.map((skill) => (
+                    <SkillCard 
+                    key = {skill.id}
+                    icon = {skill.icon}
+                    title = {skill.title}
+                    desc = {skill.desc}
+                    skills = {skill.skills}
+                />
+                )
+                )}
+            </div>
+        </section>
+    );
+}
