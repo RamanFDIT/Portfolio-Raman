@@ -1,5 +1,6 @@
 import Button from "./Button.jsx";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
     {id: 1, name: "Home", href: "#hero" },
@@ -48,7 +49,7 @@ export default function NavBar() {
 
     return(
         <nav className="flex mx-auto items-center justify-between px-10 h-15 w-full max-w-375 fixed top-0 left-0 right-0 z-50 bg-bg">
-            <a href="/home"><h2 className="text-primary text-5xl">रमन</h2></a>
+            <Link to="/"><h2 className="text-primary text-5xl">रमन</h2></Link>
             <ul className="flex justify-between items-center w-130">
                 {navLinks.map(link => (
                     <a className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} onClick = {() => handleClick(link.id)} key={link.id} href={link.href}>
@@ -56,9 +57,9 @@ export default function NavBar() {
                     </a>
                 ))}
             </ul>
-            <a href="/projects"><Button 
+            <Link to="/projects"><Button 
                 text="View All Projects"
-            /></a>    
+            /></Link>    
         </nav>
     );
 };
