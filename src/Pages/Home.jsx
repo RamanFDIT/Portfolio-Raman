@@ -1,6 +1,7 @@
 import Hero from "../Sections/Hero.jsx";
 import Projects from "../Sections/Projects.jsx";
 import Skills from "../Sections/Skills.jsx";
+import Contact from "../Sections/ContactAndSocials.jsx";
 
 export default function Home() {
     return(
@@ -8,6 +9,7 @@ export default function Home() {
             <Hero />
             <Skills />
             <Projects />
+            <Contact />
         </>
     );
 };

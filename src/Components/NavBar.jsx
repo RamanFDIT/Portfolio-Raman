@@ -48,7 +48,7 @@ export default function NavBar() {
 
     return(
         <nav className="flex mx-auto items-center justify-between px-10 h-15 w-full max-w-375 fixed top-0 left-0 right-0 z-50 bg-bg">
-            <h2 className="text-primary text-5xl">रमन</h2>
+            <a href="/home"><h2 className="text-primary text-5xl">रमन</h2></a>
             <ul className="flex justify-between items-center w-130">
                 {navLinks.map(link => (
                     <a className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} onClick = {() => handleClick(link.id)} key={link.id} href={link.href}>
@@ -56,7 +56,9 @@ export default function NavBar() {
                     </a>
                 ))}
             </ul>
-            <Button />
+            <a href="/projects"><Button 
+                text="View All Projects"
+            /></a>    
         </nav>
     );
 };
