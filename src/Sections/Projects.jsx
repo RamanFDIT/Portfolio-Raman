@@ -18,6 +18,8 @@ export default function Projects(){
             linkGitHref: "https://github.com/RamanFDIT/EDITH",
             linkDemoHref: "https://edith-demo.com",
             linkFigmaHref: "https://figma.com/file/edith",
+            linkDoc: "Documentation",
+            linkDocHref: "https://docs.edith.com",
         },
         {
             id: 2,
@@ -31,6 +33,8 @@ export default function Projects(){
             linkGitHref: "https://github.com/kparhar07-star/Ascend-App",
             linkDemoHref: "https://ascend-app-pi.vercel.app",
             linkFigmaHref: "https://www.figma.com/design/1TwaGickOb1fAKC8NDaJSF/FDIT-2120-Design?node-id=156-608&t=LTI3PpiHDsZn5nVm-1",
+            linkDoc: "Documentation",
+            linkDocHref: "https://docs.ascend.com",
         },
         {
             id: 3,
@@ -44,6 +48,8 @@ export default function Projects(){
             linkGitHref: "https://github.com/RamanFDIT/Project-1-FDIT-2140",
             linkDemoHref: "https://modeshare.netlify.app",
             linkFigmaHref: "https://www.figma.com/design/oU07tW0hsDZrh3UnGIeMut/FDIT-2140-Design?node-id=186-173&t=LTI3PpiHDsZn5nVm-1",
+            linkDoc: "Documentation",
+            linkDocHref: "https://docs.vancouver-dashboard.com",
         },
         {
             id: 4,
@@ -57,6 +63,8 @@ export default function Projects(){
             linkGitHref: "https://github.com/RamanFDIT/YouTube-Music-Animations",
             linkDemoHref: "https://youtube-music-animations.vercel.app",
             linkFigmaHref: "https://www.figma.com/design/fsWRhf1Ikt532rKZIyjaf6/YT-Music?node-id=0-1&t=LTI3PpiHDsZn5nVm-1",
+            linkDoc: "Documentation",
+            linkDocHref: "https://docs.youtube-music-motion.com",
         }
     ];
     return(
@@ -75,6 +83,8 @@ export default function Projects(){
                     linkGitHref={project.linkGitHref}
                     linkDemoHref={project.linkDemoHref}
                     linkFigmaHref={project.linkFigmaHref}
+                    linkDoc={project.linkDoc}
+                    linkDocHref={project.linkDocHref}
                 />
             )
             )}

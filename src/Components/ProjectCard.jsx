@@ -1,4 +1,4 @@
-export default function ProjectCard({image, title, subTitle, skills, linkGit, linkDemo, linkFigma, linkGitHref, linkDemoHref, linkFigmaHref}) {
+export default function ProjectCard({image, title, subTitle, skills, linkGit, linkDemo, linkFigma, linkGitHref, linkDemoHref, linkFigmaHref, linkDoc, linkDocHref}) {
 
     return(
         <div className="flex w-312.5 max-w-312.5 px-5 justify-between items-center rounded-4xl gap-10 border-2 border-card-border h-94 transform hover:scale-105 transition-transform duration-300">
@@ -14,6 +14,7 @@ export default function ProjectCard({image, title, subTitle, skills, linkGit, li
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkGitHref}>{linkGit}</a>
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkDemoHref}>{linkDemo}</a>
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkFigmaHref}>{linkFigma}</a>
+                    <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkDocHref}>{linkDoc}</a>
                 </div>
             </div>
         </div>
