@@ -1,9 +1,9 @@
 export default function Socials() {
     const socialLinks = [
-        { name: "LinkedIn", url: "#" },
-        { name: "GitHub", url: "#" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/ramandeep-singh-studio/" },
+        { name: "GitHub", url: "https://github.com/RamanFDIT" },
         { name: "Twitter", url: "#" },
-        { name: "Instagram", url: "#" }
+        { name: "Instagram", url: " " }
     ];
 
     return (
@@ -15,7 +15,7 @@ export default function Socials() {
                     href={social.url} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="text-xl text-link"
+                    className="text-xl text-link transform hover:scale-105 transition-transform duration-300"
                 >
                     {social.name}
                 </a>
