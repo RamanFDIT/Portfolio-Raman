@@ -15,7 +15,7 @@ export default function Socials() {
                     href={social.url} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="text-xl text-link transform hover:scale-105 transition-transform duration-300"
+                    className="text-xl text-link transform hover:scale-105 transition-transform duration-300 active:scale-95"
                 >
                     {social.name}
                 </a>
