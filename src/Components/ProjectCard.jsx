@@ -10,7 +10,7 @@ export default function ProjectCard({image, title, subTitle, skills, linkGit, li
                     <h4 className="text-2xl">{subTitle}</h4>
                     <p className="text-lg">{skills}</p>
                 </div>
-                <div className="flex gap-5">
+                <div className="flex gap-10">
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkGitHref}>{linkGit}</a>
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkDemoHref}>{linkDemo}</a>
                     <a target = "_blank" className="text-link transform hover:scale-105 transition-transform duration-300" href={linkFigmaHref}>{linkFigma}</a>
