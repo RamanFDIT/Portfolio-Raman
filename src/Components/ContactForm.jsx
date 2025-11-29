@@ -26,7 +26,7 @@ export default function ContactForm() {
     }
 
     return(
-            <form ref={form} className="flex flex-col gap-4 w-[40vw]" onSubmit={handleSubmit}>
+            <form ref={form} className="flex flex-col gap-4 w-[40vw] max-w-[600px] " onSubmit={handleSubmit}>
                 <span className="flex align-center justify-between">
                     <label htmlFor="name">Name:</label>
                     <input className="w-100 max-w-100 text-bg p-1 bg-text rounded-lg" type="text" id="name" name="user_name" placeholder="Enter Name" required />
