@@ -1,12 +1,14 @@
 import Button from "./Button.jsx";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import resume from "../assets/resume.pdf";
 
 const navLinks = [
     {id: 1, name: "Home", href: "#hero" },
     {id: 2, name: "Skills", href: "#skills" },
     {id: 3, name: "Projects", href: "#projects" },
-    {id: 4, name: "Contact", href: "#contact" },
+    {id: 4, name: "Resume", href: resume, target: "_blank" },
+    {id: 5, name: "Contact", href: "#contact" },
 ];
 
 export default function NavBar() {
@@ -40,9 +42,11 @@ export default function NavBar() {
 
         const timeoutId = setTimeout(() => {
             navLinks.forEach((link) => {
-                const section = document.querySelector(link.href);
-                if (section) {
-                    observer.observe(section);
+                if (link.href.startsWith("#")) {
+                    const section = document.querySelector(link.href);
+                    if (section) {
+                        observer.observe(section);
+                    }
                 }
             });
         }, 100);
@@ -60,7 +64,14 @@ export default function NavBar() {
             {/* Desktop Menu */}
             <ul className="hidden md:flex justify-between items-center w-130">
                 {navLinks.map(link => (
-                    <a className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} onClick = {() => handleClick(link.id)} key={link.id} href={link.href}>
+                    <a 
+                        className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} 
+                        onClick = {() => handleClick(link.id)} 
+                        key={link.id} 
+                        href={link.href}
+                        target={link.target}
+                        rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                    >
                         <li className="text-lg">{link.name}</li>
                     </a>
                 ))}
@@ -87,7 +98,14 @@ export default function NavBar() {
                 <div className="absolute top-15 left-0 w-full bg-bg border-b border-card-border flex flex-col items-center py-5 gap-5 md:hidden shadow-lg">
                     <ul className="flex flex-col items-center gap-5 w-full">
                         {navLinks.map(link => (
-                            <a className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} onClick = {() => handleClick(link.id)} key={link.id} href={link.href}>
+                            <a 
+                                className= {`hover:text-primary ${activeId === link.id ? "text-primary" : ""}`} 
+                                onClick = {() => handleClick(link.id)} 
+                                key={link.id} 
+                                href={link.href}
+                                target={link.target}
+                                rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                            >
                                 <li className="text-xl">{link.name}</li>
                             </a>
                         ))}
