@@ -26,18 +26,18 @@ export default function ContactForm() {
     }
 
     return(
-            <form ref={form} className="flex flex-col gap-4 w-[40vw] max-w-[600px] " onSubmit={handleSubmit}>
-                <span className="flex align-center justify-between">
+            <form ref={form} className="flex flex-col gap-4 w-full md:w-[40vw] max-w-[600px] " onSubmit={handleSubmit}>
+                <span className="flex flex-col md:flex-row align-center justify-between gap-2 md:gap-0">
                     <label htmlFor="name">Name:</label>
-                    <input className="w-100 max-w-100 text-bg p-1 bg-text rounded-lg" type="text" id="name" name="user_name" placeholder="Enter Name" required />
+                    <input className="w-full md:w-100 max-w-full md:max-w-100 text-bg p-1 bg-text rounded-lg" type="text" id="name" name="user_name" placeholder="Enter Name" required />
                 </span>    
-                <span className="flex align-center justify-between">
+                <span className="flex flex-col md:flex-row align-center justify-between gap-2 md:gap-0">
                     <label htmlFor="email">Email:</label>
-                    <input className="w-100 max-w-100 text-bg p-1 bg-text rounded-lg" placeholder="Enter Email" type="email" id="email" name="user_email" required />
+                    <input className="w-full md:w-100 max-w-full md:max-w-100 text-bg p-1 bg-text rounded-lg" placeholder="Enter Email" type="email" id="email" name="user_email" required />
                 </span> 
-                <span className="flex align-top justify-between">
+                <span className="flex flex-col md:flex-row align-top justify-between gap-2 md:gap-0">
                     <label htmlFor="message">Message:</label>
-                    <textarea className="w-100 h-50 max-w-100 text-bg p-1 bg-text rounded-lg" type="text" id="message" name="message" placeholder="Enter Message" required />
+                    <textarea className="w-full h-50 md:w-100 max-w-full md:max-w-100 text-bg p-1 bg-text rounded-lg" type="text" id="message" name="message" placeholder="Enter Message" required />
                 </span> 
                 <Button text="Send Message" type="submit" />
                 {status && <p className="text-center mt-2">{status}</p>}

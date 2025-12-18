@@ -9,6 +9,7 @@
     --color-card-border: hsla(87, 53%, 54%, 1);
     --color-link: hsla(207, 93%, 54%, 1);
     --font-mono: 'Roboto Mono', monospace;
+    --breakpoint-md: 930px;
 }
 
 html {

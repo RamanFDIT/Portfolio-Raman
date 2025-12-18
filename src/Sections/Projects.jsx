@@ -91,7 +91,7 @@ export default function Projects(){
                 </Suspense>
             )
             )}
-            <a className="text-right w-full text-accent" href="/projects">View All the Projects</a>
+            <a className="text-center md:text-right w-full text-accent" href="/projects">View All the Projects</a>
         </section>
     );
 }
