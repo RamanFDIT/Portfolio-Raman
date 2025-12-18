@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
 import edith from "../assets/EDITH.png";
 import ascend from "../assets/Ascend.svg";
 import vancouver from "../assets/city-of-vancouver.svg";
@@ -91,7 +92,7 @@ export default function Projects(){
                 </Suspense>
             )
             )}
-            <a className="text-center md:text-right w-full text-accent" href="/projects">View All the Projects</a>
+            <Link className="text-center md:text-right w-full text-accent" to="/projects">View All the Projects</Link>
         </section>
     );
 }
