@@ -2,7 +2,7 @@ export default function ProjectCard({image, title, subTitle, skills, linkGit, li
 
     return(
         <div className="flex w-312.5 max-w-312.5 px-5 justify-between items-center rounded-4xl gap-10 border-2 border-card-border h-94 transform hover:scale-105 transition-transform duration-300">
-            <img className="w-76 max-w-76 h-auto " src={image}></img>
+            <img className="w-76 max-w-76 h-auto " src={image} loading="lazy" alt={title} />
             <div className= "flex flex-col justify-between h-full w-178 py-5 items-start">
                 <div></div>
                 <h3 className="text-3xl font-medium">{title}</h3>

@@ -13,7 +13,11 @@ export default function Hero() {
                 <h1 className="text-5xl">Your Friendly Neighborhood <span className="text-primary">RA-MAN</span></h1>
                 <div>
                     <p className ="text-center text-2xl">Hello, I am Ramandeep Singh</p>
-                    <p className ="text-center text-2xl">I am a <span className="text-primary">UI/UX Designer</span> and a <span className="text-primary">Front-End Web Developer</span></p>
+                    <p className="text-center text-2xl max-w-2xl leading-relaxed">
+                        I architect <span className="text-primary">AI-integrated web applications</span> and 
+                        build high-fidelity <span className="text-primary">Design Systems</span> that bridge the 
+                        gap between Figma and production-ready React code.
+                    </p>
                 </div>
             </div>
             <div>
