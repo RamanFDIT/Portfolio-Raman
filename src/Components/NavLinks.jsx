@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink as RouterNavLink, useLocation } from "react-router-dom";
 
-const NavLink = ({ label, href }) => {
+const NavLink = ({ label, href, onClick }) => {
     const location = useLocation();
     const [isHashActive, setIsHashActive] = useState(false);
 
@@ -25,6 +25,7 @@ const NavLink = ({ label, href }) => {
             <a
                 className={`text-xl text-textPrimary hover:underline transition-all duration-200 ${isHashActive ? "font-semibold" : ""}`}
                 href={href}
+                onClick={onClick}
             >
                 {label}
             </a>
@@ -33,7 +34,7 @@ const NavLink = ({ label, href }) => {
 
     if (!href) {
         return (
-            <a className="text-xl text-textPrimary hover:underline" href={href}>
+            <a className="text-xl text-textPrimary hover:underline" href={href} onClick={onClick}>
                 {label}
             </a>
         );
@@ -45,6 +46,7 @@ const NavLink = ({ label, href }) => {
                 `text-xl text-textPrimary hover:underline transition-all duration-200 ${isActive ? "font-semibold" : ""}`
             }
             to={href}
+            onClick={onClick}
         >
             {label}
         </RouterNavLink>

@@ -137,7 +137,7 @@ const NavBar = () => {
             {/* Mobile menu dropdown */}
             <div className={`md:hidden absolute top-13 left-0 w-full bg-primary shadow-md flex flex-col items-center gap-4 py-6 transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
                 {navlinks.map((link) => (
-                    <NavLink key={link.id} href={link.href} label={link.label} />
+                    <NavLink key={link.id} href={link.href} label={link.label} onClick={() => setMenuOpen(false)} />
                 ))}
                 <ProjectDropdown projects={projects} onSelect={handleProjectSelect} align="center" />
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>
