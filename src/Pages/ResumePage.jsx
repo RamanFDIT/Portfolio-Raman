@@ -2,8 +2,15 @@ import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import useReveal from "../hooks/useReveal";
 import resumePreview from "../assets/resume-preview.png";
+import useSEO from "../hooks/useSEO";
 
 const ResumePage = () => {
+    useSEO({
+        title: "Resume — Raman's Studio",
+        description: "View and download the resume of Ramandeep Singh — front-end developer and designer with experience in React, GSAP, and interactive web development.",
+        path: "/resume",
+    });
+
     const sectionRef = useReveal({ y: 40, duration: 1, stagger: 0.2 });
 
     return (
@@ -19,13 +26,17 @@ const ResumePage = () => {
                         <h1 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold leading-tight">
                             Resume
                         </h1>
-                        <a data-reveal href="/resume.pdf" download="Ramandeep_Singh_Resume.pdf">
-                            <button className="flex items-center gap-3 bg-secondary text-textSecondary font-main text-lg px-8 py-3 border-none transition-colors ease-out duration-300 hover:bg-hoverColor hover:text-textPrimary cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3" />
-                                </svg>
-                                Download
-                            </button>
+                        <a
+                            data-reveal
+                            href="/resume.pdf"
+                            download="Ramandeep_Singh_Resume.pdf"
+                            className="flex items-center gap-3 bg-secondary text-textSecondary font-main text-lg px-8 py-3 border-none transition-colors ease-out duration-300 hover:bg-hoverColor hover:text-textPrimary cursor-pointer"
+                            aria-label="Download resume as PDF"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3" />
+                            </svg>
+                            Download
                         </a>
                     </div>
 
@@ -33,8 +44,9 @@ const ResumePage = () => {
                     <div data-reveal className="w-full max-w-md lg:max-w-lg aspect-[8.5/11] shadow-lg overflow-hidden border border-secondary/10">
                         <img
                             src={resumePreview}
-                            alt="Resume Preview"
+                            alt="Preview of Ramandeep Singh's resume"
                             className="w-full h-full object-cover object-top"
+                            loading="lazy"
                         />
                     </div>
                 </div>

@@ -3,12 +3,19 @@ import emailjs from "@emailjs/browser";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import useReveal from "../hooks/useReveal";
+import useSEO from "../hooks/useSEO";
 
 const SERVICE_ID = "service_ur42y7f";
 const TEMPLATE_ID = "template_wjustju";
 const PUBLIC_KEY = "JGTmoxXpGqN_StC-I";
 
 const ContactPage = () => {
+    useSEO({
+        title: "Contact — Raman's Studio",
+        description: "Get in touch with Ramandeep Singh for project inquiries, collaborations, or just to say hi.",
+        path: "/contact",
+    });
+
     const sectionRef = useReveal({ y: 40, duration: 1, stagger: 0.2 });
     const formRef = useRef(null);
     const [status, setStatus] = useState("idle"); // idle | sending | sent | error

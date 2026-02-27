@@ -14,6 +14,14 @@ html {
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    color-scheme: only light;
+}
+
+/* Prevent Samsung Internet & other browsers from force-inverting colors */
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: only light;
+    }
 }
 
 .section {
