@@ -1,4 +1,4 @@
-import heroImg from "../assets/Heroimg.png";
+import heroImg from "../assets/Heroimg.webp";
 import TextType from "../Components/AnimateSlogan";
 import useReveal from "../hooks/useReveal";
 
