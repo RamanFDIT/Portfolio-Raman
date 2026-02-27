@@ -8,7 +8,7 @@ const OverviewSection = () => {
             ref={sectionRef}
             className="section w-full min-h-screen flex flex-col items-center justify-center bg-secondary text-primary px-4 py-20 lg:py-0 lg:h-screen"
         >
-            <div className="max-w-400 w-full flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
+            <div className="max-w-400 w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-20">
                 <h2 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold leading-tight shrink-0">
                     Overview
                 </h2>
