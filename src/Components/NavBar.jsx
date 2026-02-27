@@ -128,7 +128,9 @@ const NavBar = () => {
                     <ProjectDropdown projects={projects} onSelect={handleProjectSelect} />
                 </div>
                 <div className="hidden md:block">
-                    <ButtonPrimary label="Contact Me" />
+                    <Link to="/contact">
+                        <ButtonPrimary label="Contact Me" />
+                    </Link>
                 </div>
             </div>
 
@@ -138,7 +140,9 @@ const NavBar = () => {
                     <NavLink key={link.id} href={link.href} label={link.label} />
                 ))}
                 <ProjectDropdown projects={projects} onSelect={handleProjectSelect} align="center" />
-                <ButtonPrimary label="Contact Me" />
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                    <ButtonPrimary label="Contact Me" />
+                </Link>
             </div>
         </nav>
     );
