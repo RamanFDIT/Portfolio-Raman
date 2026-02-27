@@ -7,13 +7,13 @@ const AboutSection = () => {
 
     return(
         <section id="about" ref={sectionRef} className="section w-full max-w-400 h-auto min-h-screen flex items-center justify-center px-4 py-20 lg:py-0 lg:h-screen">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-start lg:items-center">
                 <div className="flex flex-col lg:flex-row justify-center w-full lg:w-310 gap-6 lg:gap-0">
                     <p data-reveal className="text-base md:text-xl font-body w-full lg:w-78 order-2 lg:order-1">Obsession is a superpower. Whether analyzing the rapid-fire rhythm of an Eminem track, strategizing the next move on a chessboard, solving a Rubik's cube, or architecting a complex React component, the approach remains identical: diving all the way in and figuring out exactly how the underlying logic works.</p>
-                    <h2 data-reveal className="text-7xl md:text-9xl xl:text-[180px] font-semibold text-center order-1 lg:order-2">Raman</h2>
+                    <h2 data-reveal className="text-7xl md:text-9xl xl:text-[180px] font-semibold text-left lg:text-center order-1 lg:order-2">Raman</h2>
                     <p data-reveal className="hidden lg:block text-base md:text-xl font-body w-full lg:w-90 text-left lg:text-right lg:h-54 order-3">Currently completing the FDIT program at KPU, the daily drive is about turning ambitious, sci-fi concepts into tangible digital realities. Taking a project like the E.D.I.T.H. capstone from a raw idea to a fully functional, AI-integrated application requires a deep-dive focus. It is not just about writing code; it is about living the project until the architecture is flawless.</p>
                 </div>   
-                <div data-reveal className="flex flex-col items-center mt-6 lg:mt-0">
+                <div data-reveal className="flex flex-col items-start lg:items-center mt-6 lg:mt-0">
                     <Link to="/about">
                         <ButtonPrimary label="Know More"/>
                     </Link>

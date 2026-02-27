@@ -8,13 +8,13 @@ const Footer = () => {
             <div className = "flex w-full h-13 max-w-400 justify-between items-center px-4 xl:px-0">
                 <div className = "flex gap-4 sm:gap-10">
                     <a href="www.linkedin.com/in/ramandeep-singh-studio">
-                        <img src = {linkedin} alt="LinkedIn"></img>
+                        <img src = {linkedin} alt="LinkedIn" className="w-5 sm:w-auto"></img>
                     </a>
                     <a href = "https://github.com/RamanFDIT">
-                        <img src = {github} alt="GitHub"></img>
+                        <img src = {github} alt="GitHub" className="w-5 sm:w-auto"></img>
                     </a>
                     <a href = "mailto:studio.ramandeep@gmail.com">
-                        <img src = {gmail} alt = "Gmail"></img>
+                        <img src = {gmail} alt = "Gmail" className="w-5 sm:w-auto"></img>
                     </a>
                 </div>
                 <p className = "font-semibold text-sm sm:text-xl">Made with React</p>

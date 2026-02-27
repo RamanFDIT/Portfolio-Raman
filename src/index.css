@@ -13,13 +13,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-}
-
-/* Disable scroll-snap on small screens where sections are taller than viewport */
-@media (min-width: 1024px) {
-    html {
-        scroll-snap-type: y mandatory;
-    }
+    scroll-snap-type: y mandatory;
 }
 
 .section {
