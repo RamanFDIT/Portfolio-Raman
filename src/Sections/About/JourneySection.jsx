@@ -9,7 +9,7 @@ const JourneySection = () => {
             className="section w-full min-h-screen flex flex-col items-center justify-center px-4 py-20 lg:py-0 lg:h-screen"
         >
             <div className="max-w-400 w-full flex flex-col items-center gap-10">
-                <h2 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold text-center leading-tight">
+                <h2 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold text-left lg:text-center leading-tight">
                     The Journey
                 </h2>
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-5xl w-full">
