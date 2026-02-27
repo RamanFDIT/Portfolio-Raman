@@ -1,17 +1,24 @@
-import NavBar from "./Components/NavBar";
-import Home from "./Pages/Home.jsx";
-import Projects from "./Pages/Projects.jsx";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
+import AboutPage from "./Pages/AboutPage";
+import ResumePage from "./Pages/ResumePage";
+import COVCaseStudyPage from "./Pages/COVCaseStudyPage";
+import EDITHCaseStudyPage from "./Pages/EDITHCaseStudyPage";
+import AscendCaseStudyPage from "./Pages/AscendCaseStudyPage";
 
-export default function App() {
+function App() {
   return (
-      <HashRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={ <Projects />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </HashRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+        <Route path="/projects/dashboard" element={<COVCaseStudyPage />} />
+        <Route path="/projects/edith" element={<EDITHCaseStudyPage />} />
+        <Route path="/projects/ascend" element={<AscendCaseStudyPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
