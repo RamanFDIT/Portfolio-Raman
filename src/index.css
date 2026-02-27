@@ -11,18 +11,19 @@
 }
 
 html {
-    scroll-snap-type: y mandatory;
     font-size: 16px;
-}
-.section {
-    scroll-snap-align: start;
-    height: 100vh;
+    scroll-behavior: smooth;
 }
 
-@media (min-width: 930px) {
+/* Disable scroll-snap on small screens where sections are taller than viewport */
+@media (min-width: 1024px) {
     html {
-        font-size: 16px;
+        scroll-snap-type: y mandatory;
     }
+}
+
+.section {
+    scroll-snap-align: start;
 }
 
 body{

@@ -21,6 +21,7 @@ const TextType = ({
   variableSpeed,
   onSentenceComplete,
   startOnVisible = false,
+  pauseWhenNotVisible = false,
   reverseMode = false,
   ...props
 }) => {
@@ -46,13 +47,15 @@ const TextType = ({
   };
 
   useEffect(() => {
-    if (!startOnVisible || !containerRef.current) return;
+    if ((!startOnVisible && !pauseWhenNotVisible) || !containerRef.current) return;
 
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+          } else if (pauseWhenNotVisible) {
+            setIsVisible(false);
           }
         });
       },
@@ -61,20 +64,25 @@ const TextType = ({
 
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, [startOnVisible]);
+  }, [startOnVisible, pauseWhenNotVisible]);
 
   useEffect(() => {
     if (showCursor && cursorRef.current) {
-      gsap.set(cursorRef.current, { opacity: 1 });
-      gsap.to(cursorRef.current, {
-        opacity: 0,
-        duration: cursorBlinkDuration,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power2.inOut'
-      });
+      if (isVisible) {
+        gsap.set(cursorRef.current, { opacity: 1 });
+        gsap.to(cursorRef.current, {
+          opacity: 0,
+          duration: cursorBlinkDuration,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        });
+      } else {
+        gsap.killTweensOf(cursorRef.current);
+        gsap.set(cursorRef.current, { opacity: 0 });
+      }
     }
-  }, [showCursor, cursorBlinkDuration]);
+  }, [showCursor, cursorBlinkDuration, isVisible]);
 
   useEffect(() => {
     if (!isVisible) return;
