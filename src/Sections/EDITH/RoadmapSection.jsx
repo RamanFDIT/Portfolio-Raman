@@ -35,7 +35,7 @@ const RoadmapSection = () => {
             ref={sectionRef}
             className="section w-full min-h-screen flex flex-col items-center justify-center px-4 py-20 lg:py-0 lg:h-screen"
         >
-            <div className="max-w-400 w-full flex flex-col items-start lg:items-center gap-10">
+            <div className="max-w-350 w-full flex flex-col items-start lg:items-center gap-10">
                 <h2 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold text-left lg:text-center leading-tight">
                     Roadmap
                 </h2>

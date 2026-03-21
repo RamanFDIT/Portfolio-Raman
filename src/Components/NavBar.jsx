@@ -92,7 +92,7 @@ const NavBar = () => {
     const navlinks = [
         {
             id : "1",
-            href : isLanding ? "#about" : "/about",
+            href : "/about",
             label : "About"
         },
         {
@@ -104,7 +104,7 @@ const NavBar = () => {
 
     return (
         <nav className="w-full flex justify-center items-center bg-primary fixed top-0 z-50">
-            <div className="flex w-full h-13 max-w-400 justify-between items-center px-4 xl:px-0">
+            <div className="flex w-full h-13 max-w-350 justify-between items-center px-4 xl:px-0">
                 <Link to="/">
                     <img className="w-16 md:w-24 h-auto" src={logo} alt="My Logo" />
                 </Link>

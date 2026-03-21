@@ -16,7 +16,11 @@ const LINKS = [
         href: "https://www.figma.com/design/1TwaGickOb1fAKC8NDaJSF/FDIT-2120-Design?node-id=156-608&t=eFugCdo6sSQkvomD-1",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4zm0-20C5.8 4 4 5.8 4 8s1.8 4 4 4h4V4H8zm0 8c-2.2 0-4-1.8-4-4s1.8-4 4-4h4v8H8zm8-8h-4v8h4c2.2 0 4-1.8 4-4s-1.8-4-4-4zm0 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" />
+                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
             </svg>
         ),
     },
@@ -39,7 +43,7 @@ const HeroSection = () => {
             ref={sectionRef}
             className="section w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 lg:py-0 lg:h-screen"
         >
-            <div className="max-w-400 w-full flex flex-col lg:flex-row items-start lg:items-center justify-center gap-10 lg:gap-20">
+            <div className="max-w-350 w-full flex flex-col lg:flex-row items-start lg:items-center justify-center gap-10 lg:gap-20">
                 <div className="flex flex-col gap-6 max-w-3xl">
                     <h1 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold leading-tight">
                         Ascend

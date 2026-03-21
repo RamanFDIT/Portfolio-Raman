@@ -44,7 +44,7 @@ const ContactPage = () => {
                 ref={sectionRef}
                 className="section w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 lg:py-0 lg:h-screen"
             >
-                <div className="max-w-400 w-full flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-20">
+                <div className="max-w-350 w-full flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-20">
                     {/* Left — heading + subtext */}
                     <div className="flex flex-col gap-6 max-w-xl lg:pt-4">
                         <h1 data-reveal className="text-6xl md:text-8xl xl:text-[140px] font-semibold leading-tight">
@@ -54,9 +54,9 @@ const ContactPage = () => {
                             Have a project in mind, a question, or just want to say hi?
                             Drop me a message and I'll get back to you as soon as I can.
                         </p>
-                        <p data-reveal className="text-base font-body opacity-50">
+                        <a href="mailto:studio.ramandeep@gmail.com" aria-label="Send email" className = "underline  hover:text-secondary transition-colors duration-300">
                             studio.ramandeep@gmail.com
-                        </p>
+                        </a>
                     </div>
 
                     {/* Right — form */}
