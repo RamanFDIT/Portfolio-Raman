@@ -33,3 +33,13 @@ body{
     font-family: var(--font-main);
     background-color: var(--color-primary);
 }
+
+/* Disable scroll snapping on smaller screens */
+@media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
+    .section {
+        scroll-snap-align: none;
+    }
+}
